@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contador de clicks</title>
+  <style>
+    body { font-family: sans-serif; display: grid; place-items: center; height: 100vh; margin: 0; }
+    button { font-size: 1.5rem; padding: 1rem 2rem; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div style="text-align:center">
+    <h1>Clicks: <span id="contador">0</span></h1>
+    <button id="boton">¡Haz click!</button>
+  </div>
+  <script>
+    let clicks = 0;
+    document.getElementById("boton").addEventListener("click", () => {
+      clicks++;
+      document.getElementById("contador").textContent = clicks;
+    });
+  </script>
+</body>
+</html>
